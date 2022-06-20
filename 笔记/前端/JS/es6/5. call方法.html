@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>5. call方法</title>
+	</head>
+	<body>
+		<script charset="utf-8">
+			function fn(x, y) {
+				console.log(11);
+				console.log(this);
+				console.log(x + y);
+			}
+			var o = {
+				name: "anady",
+			};
+			// fn();
+			// fn.call();
+			fn.call(o, 1, 2);
+		</script>
+	</body>
+</html>

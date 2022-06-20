@@ -1,0 +1,8 @@
+body {
+	font-size: 12rem;
+}
+div {
+	width: 2rem;
+	height: 4rem;
+	background-color: pink;
+}

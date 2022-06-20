@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>2. 获得鼠标坐标</title>
+	</head>
+	<style type="text/css" media="screen">
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+		}
+	</style>
+	<body>
+		<div></div>
+		<script>
+			var div = document.querySelector("div");
+			div.addEventListener("mousemove", function (e) {
+				var x = e.pageX - this.offsetLeft;
+				var y = e.pageY - this.offsetTop;
+				div.innerHTML = "x的坐标" + x + "y的坐标" + y;
+			});
+		</script>
+	</body>
+</html>

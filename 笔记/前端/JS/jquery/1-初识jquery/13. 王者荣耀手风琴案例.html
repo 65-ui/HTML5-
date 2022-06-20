@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>13. 王者荣耀手风琴案例</title>
+		<script src="../js/jquery.min.js"></script>
+		<style type="text/css" media="screen">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			img {
+				display: block;
+			}
+			li {
+				list-style: none;
+			}
+			.king {
+				width: 852px;
+				margin: 100px auto;
+				background: url(images/img/bg.png) no-repeat;
+				overflow: hidden;
+				padding: 10px;
+			}
+			.king ul {
+				overflow: hidden;
+			}
+			.king li {
+				position: relative;
+				float: left;
+				width: 69px;
+				height: 69px;
+				margin-right: 10px;
+			}
+
+			.king li.current {
+				width: 224px;
+			}
+
+			.king li.current .big {
+				display: block;
+			}
+
+			.king li.current .small {
+				display: none;
+			}
+
+			.big {
+				width: 224px;
+				display: none;
+			}
+
+			.small {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 69px;
+				height: 69px;
+				border-radius: 5px;
+			}
+		</style>
+		<script charset="utf-8">
+			$(function () {
+				$(".king li").mouseenter(function () {
+					//		NOTE: .当前小li 宽度变为 224px， 同时里面的小图片淡出，大图片淡入
+					$(this)
+						.stop()
+						.animate({
+							width: 224,
+						})
+						.find(".small")
+						.stop()
+						.fadeOut()
+						.siblings(".big")
+						.stop()
+						.fadeIn();
+					//	NOTE: .其余兄弟小li宽度变为69px， 小图片淡入， 大图片淡出
+					$(this)
+						.siblings("li")
+						.stop()
+						.animate({
+							width: 69,
+						})
+						.find(".small")
+						.stop()
+						.fadeIn()
+						.siblings(".big")
+						.stop()
+						.fadeOut();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="king">
+			<ul>
+				<li class="current">
+					<a href="#">
+						<img src="images/img/m1.jpg" alt="" class="small" />
+						<img src="images/img/m.png" alt="" class="big" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/img/l1.jpg" alt="" class="small" />
+						<img src="images/img/l.png" alt="" class="big" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/img/c1.jpg" alt="" class="small" />
+						<img src="images/img/c.png" alt="" class="big" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/img/w1.jpg" alt="" class="small" />
+						<img src="images/img/w.png" alt="" class="big" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/img/z1.jpg" alt="" class="small" />
+						<img src="images/img/z.png" alt="" class="big" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/img/h1.jpg" alt="" class="small" />
+						<img src="images/img/h.png" alt="" class="big" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/img/t1.jpg" alt="" class="small" />
+						<img src="images/img/t.png" alt="" class="big" />
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

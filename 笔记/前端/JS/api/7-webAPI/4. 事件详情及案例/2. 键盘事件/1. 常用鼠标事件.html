@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>1. 常用鼠标事件</title>
+	</head>
+	<body>
+		<button>刚刚</button>
+		<script charset="utf-8">
+			document.addEventListener("keyup", function () {
+				console.log("我弹起来了");
+			});
+			document.addEventListener("keydown", function () {
+				console.log("我按下了");
+			});
+			// keypress 不能执行有功能键的
+			document.addEventListener("keypress", function () {
+				console.log("我按下了press");
+			});
+			// 三个事件执行顺序是 keydown keypress keyup
+		</script>
+	</body>
+</html>

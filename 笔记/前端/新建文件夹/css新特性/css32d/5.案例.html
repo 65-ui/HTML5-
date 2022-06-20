@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+       <img src="339416.jpg" alt="">
+    </div>
+    <div>
+       <img src="339416.jpg" alt="">
+    </div>
+    <div>
+       <img src="339416.jpg" alt="">
+    </div>
+    <div>
+       <img src="339416.jpg" alt="">
+    </div>
+
+    <style>
+     div {
+           overflow: hidden;
+           width: 200px;
+           height: 200px;
+           border: 1px solid pink;
+           margin: 10px;
+           border-radius: 50%;
+           float: left;
+       }
+
+     div img {
+           width: 100%;
+           height: 100%;
+           border-radius: 50%;
+           transform: rotate(180deg);
+           transform-origin: left bottom;
+           transition: all 2s;
+       }
+      div:hover img{
+           transform: rotate(0deg);
+       }
+      .one {
+          width: 200px;
+          height: 200px;
+          background-color: pink;
+          border-radius: 0px;
+          transition: all 1s;
+          transform-origin: left bottom;
+      }
+      .one:hover{
+          transform: scale(0.2);
+      }
+    </style>
+    <div class="one"></div>
+</body>
+</html>

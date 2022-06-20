@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>3. 构造函数与原型</title>
+	</head>
+	<body>
+		<script charset="utf-8">
+			function Stra(username, age) {
+				// HACK: 实力成员
+				this.username = username;
+				this.age = age;
+				/* this.song = function () {
+					console.log(333);
+				}; */
+			}
+			// HACK : 原型对象 prototype 共享方法
+			/* Stra.prototype.song = function () {
+				console.log("qq");
+			}; */
+			Stra.prototype = {
+				constructor: Stra,
+				song: function () {
+					console.log("qw");
+				},
+			};
+			var ldh = new Stra("ldh", 18);
+			console.log(ldh.username);
+			// HACK: 静态成员
+			Stra.sex = "nam";
+			console.log(Stra.sex);
+			console.dir(Stra);
+			ldh.song();
+			// HACK : 每个原型对象身上都有一个 __proto__ 属性
+			console.log(ldh);
+			console.log(ldh.__proto__ === Stra.prototype);
+
+			console.log(Stra.prototype);
+			console.log(ldh.__prot__);
+			console.log(Stra.prototype.constructor);
+			console.log(ldh.__proto__.constructor);
+		</script>
+	</body>
+</html>

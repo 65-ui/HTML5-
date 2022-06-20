@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>16.闭包</title>
+	</head>
+	<body>
+		body
+		<script>
+			function fun() {
+				// HACK: 闭包作用 延伸了变量的范围
+				var num = 10;
+				/* function funn() {
+					console.log(num);
+				}
+				return funn; */
+				return function () {
+					console.log(num);
+				};
+			}
+			var f = fun();
+			f();
+		</script>
+	</body>
+</html>

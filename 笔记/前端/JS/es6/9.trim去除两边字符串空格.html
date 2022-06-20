@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>9.trim去除两边字符串空格</title>
+	</head>
+	<body>
+		<input type="text" />
+		<button>提交</button>
+		<div></div>
+		<script>
+			str = "    andy     ";
+			console.log(str);
+			var str1 = str.trim();
+			console.log(str1);
+			var input = document.querySelector("input");
+			var btn = document.querySelector("button");
+			var div = document.querySelector("div");
+			btn.onclick = function () {
+				var str = input.value.trim();
+				if (str === "") {
+					alert("请输入内容");
+				} else {
+					console.log(str);
+					console.log(str.length);
+					div.innerHTML = str;
+				}
+			};
+		</script>
+	</body>
+</html>

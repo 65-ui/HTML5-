@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>5.事件委托代理</title>
+	</head>
+	<body>
+		<ul>
+			<li>hello 1</li>
+			<li>hello 2</li>
+			<li>hello 3</li>
+			<li>hello 4</li>
+			<li>hello 5</li>
+		</ul>
+		<script charset="utf-8">
+			var ul = document.querySelector("ul");
+			ul.addEventListener("click", function (e) {
+				alert("hello 1");
+				e.target.style.backgroundColor = "pink";
+			});
+		</script>
+	</body>
+</html>

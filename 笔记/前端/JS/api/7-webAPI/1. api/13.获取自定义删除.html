@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="demo" index="1" class="footer"></div>
+		<script>
+			var div = document.querySelector("div");
+			// 1.获取属性值内置的
+			console.log(div.id);
+			// 2.获取自定义属性值
+			console.log(div.getAttribute("id"));
+			// 3.更改内置属性值
+			div.id = "test";
+			div.className = "navs";
+			// 4.更改自定义属性值
+			div.setAttribute("index", 2);
+			div.setAttribute("class", "navses");
+			// 5.删除属性值
+			div.removeAttribute("index");
+		</script>
+	</body>
+</html>

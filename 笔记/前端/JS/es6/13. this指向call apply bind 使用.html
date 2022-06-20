@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>13. this指向call apply bind 使用</title>
+	</head>
+	<body>
+		body
+		<button>按钮</button>
+		<button>按钮</button>
+		<button>按钮</button>
+		<button>按钮</button>
+		<button>按钮</button>
+		<button>按钮</button>
+		<button>按钮</button>
+		<script charset="utf-8">
+			// 1. NOTE:call 使用
+			var o = {
+				name: "andy",
+			};
+			function fn(a, b) {
+				console.log(this);
+				console.log(a + b);
+			}
+			fn.call(o, 1, 2);
+			// call 可以调用函数  还可以改变函数this 指向
+			// call 主要作用是继承
+			function Father(uname, age, sex) {
+				this.uname = uname;
+				this.age = age;
+				this.sex = sex;
+			}
+			function Son(uname, age, sex) {
+				Father.call(this, uname, age, sex);
+			}
+			var son = new Son("刘德华", 18, "男");
+			console.log(son);
+			// NOTE:2. apply
+			var o = {
+				name: "andy",
+			};
+			function fn(arr) {
+				console.log(this);
+				// 打印是字符串
+				console.log(arr);
+			}
+			fn.apply(o, ["pink"]);
+			// 1. apply 可以调用函数  还可以改变函数this 指向
+			// 2. apply 它的参数是数组(伪数组)
+			// 3. apply主要应用
+			var arr = [1, 44, 55, 99, 4];
+			// 最大值
+			var max = Math.max.apply(Math, arr);
+			// 最小值
+			var mix = Math.min.apply(Math, arr);
+			console.log(max, mix);
+			// 3. NOTE: bind 绑定捆绑
+			var o = {
+				name: "andy",
+			};
+			function fn() {
+				console.log(this);
+			}
+			var f = fn.bind(o);
+			f();
+			// 1. bind 不会调用函数  还可以改变函数this 指向
+			// 2. bind 返回的是原函数改变this之后产生新函数
+			// 3. 如果有函数我们不需要立即调用，但又想改变函数内部this指向可以用bind
+			/* var btn = document.querySelector("button");
+			btn.onclick = function () {
+				this.disabled = true;
+				setInterval(
+					function () {
+						this.disabled = false;
+					}.bind(this),
+					3000,
+				);
+			}; */
+			var btns = document.querySelectorAll("button");
+			for (var i = 0; i < btns.length; i++) {
+				btns[i].onclick = function () {
+					this.disabled = true;
+					setInterval(
+						function () {
+							this.disabled = false;
+						}.bind(this),
+						2000,
+					);
+				};
+			}
+		</script>
+	</body>
+</html>

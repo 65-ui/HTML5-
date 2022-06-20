@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>9. 下拉</title>
+		<script src="../js/jquery.min.js"></script>
+		<style type="text/css" media="screen">
+			div {
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+				display: none;
+			}
+		</style>
+		<script charset="utf-8">
+			$(function () {
+				$("button")
+					.eq(0)
+					.click(function () {
+						$("div").slideDown(1000);
+					});
+				$("button")
+					.eq(1)
+					.click(function () {
+						$("div").slideUp(1000);
+					});
+				$("button")
+					.eq(2)
+					.click(function () {
+						$("div").slideToggle(1000);
+					});
+			});
+		</script>
+	</head>
+	<body>
+		<button>下拉滑动</button>
+		<button>上拉滑动</button>
+		<button>切换滑动</button>
+		<div></div>
+	</body>
+</html>

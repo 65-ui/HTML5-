@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>1.节点操作</title>
+	</head>
+	<body>
+		<div class="demo">
+			<div class="box">
+				<span class="erweima"></span>
+			</div>
+		</div>
+		<ul>
+			<li>我是li</li>
+			<li>我是li</li>
+			<li>我是li</li>
+			<li>我是li</li>
+		</ul>
+		<ol>
+			<li>我是li1</li>
+			<li>我是li2</li>
+			<li>我是li3</li>
+			<li>我是li4</li>
+
+			<li>我是li5</li>
+		</ol>
+		<script>
+			var erweima = document.querySelector(".erweima");
+			console.dir(erweima.parentNode);
+			console.log(erweima.parentNode);
+
+			var ul = document.querySelector("ul");
+			var lis = ul.querySelectorAll("li");
+			console.log(ul.childNodes);
+			console.log(ul.childNodes[0].nodeType);
+			console.log(ul.childNodes[1].nodeType);
+			// 开发实际
+			console.log(ul.children);
+			var ol = document.querySelector("ol");
+			console.log(ol.firstChild);
+			console.log(ol.lastChild);
+			console.log(ol.firstElementChild);
+			console.log(ol.lastElementChild);
+
+			// 开发实际
+			console.log(ol.children);
+
+			console.log(ol.children[0]);
+			console.log(ol.children[ol.children.length - 1]);
+		</script>
+	</body>
+</html>

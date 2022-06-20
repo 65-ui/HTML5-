@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    input[type=submit] {
+      color: pink;
+    }
+    ul li:first-child {
+      background-color: deeppink;
+    }
+    ul li:last-child {
+      background-color: pink;
+    }
+    ul li:nth-child(3) {
+      background-color: powderblue;
+    }
+    /*    选择了所有  */
+   /* ol li:nth-child(n) {
+      background-color: purple;
+    }*/
+    /* 偶数
+    ol li:nth-child(2n){
+      background-color: saddlebrown;
+    }*/
+    /* 奇数
+    ol li:nth-child(2n+1){
+      background-color: sandybrown;
+    } */
+    ol li:nth-child(n+3){
+      background-color: slategrey;
+    }
+    ol li:nth-child(-n+3){
+      background-color: springgreen-;
+    }
+    section div:nth-child(1){
+      background-color: springgreen;
+    }
+    section div:nth-of-type(2){
+      background-color: tan;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="text" name="" id="">
+  <input type="submit" value="提交">
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+  <ol>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ol>
+  <section>
+    <p>1</p>
+    <div>1</div>
+    <div>2</div>
+  </section>
+</body>
+
+</html>

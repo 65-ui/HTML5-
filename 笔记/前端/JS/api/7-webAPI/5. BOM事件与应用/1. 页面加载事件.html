@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>1. 页面加载事件</title>
+		<script charset="utf-8">
+			// window.onload = function () {
+			// 	var btn = document.querySelector("button");
+			// 	btn.addEventListener("click", function () {
+			// 		alert(33);
+			// 	});
+			// load 等页面内容全部加载完毕
+			window.addEventListener("load", function () {
+				var btn = document.querySelector("button");
+				btn.addEventListener("click", function () {
+					alert(33);
+				});
+			});
+			// dom加载完成 加载快
+			document.addEventListener("DOMContentLoaded", function () {
+				alert(44);
+			});
+			// 浏览器变化
+			window.addEventListener("load", function () {
+				var div = document.querySelector("div");
+				document.addEventListener("resize", function () {
+					console.log(window.innerWidth);
+					if (window.innerWidth <= 800) {
+						div.style.display = "none";
+					} else {
+						div.style.display = "block";
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div></div>
+		<button>按钮</button>
+	</body>
+</html>

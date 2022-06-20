@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>17.闭包案例</title>
+	</head>
+	<body>
+		body
+		<ul class="nav">
+			<li>包子1-1</li>
+			<li>包子1-2</li>
+			<li>包子1-3</li>
+			<li>包子1-4</li>
+		</ul>
+		<script charset="utf-8">
+			var lis = document.querySelector(".nav").querySelectorAll("li");
+			for (var i = 0; i < lis.length; i++) {
+				(function (i) {
+					setTimeout(function () {
+						console.log(lis[i].innerHTML);
+					}, 3000);
+				})(i);
+			}
+		</script>
+	</body>
+</html>

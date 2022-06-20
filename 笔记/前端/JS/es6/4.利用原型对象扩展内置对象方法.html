@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>4.利用原型对象扩展内置对象方法</title>
+	</head>
+	<body>
+		<script charset="utf-8">
+			Array.prototype.sum = function () {
+				var sum = 0;
+				for (var i = 0; i < this.length; i++) {
+					sum += this[i];
+				}
+				return sum;
+			};
+			var arr = [1, 888, 1];
+			console.log(arr.sum());
+			console.log(Array.prototype);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>7. 鼠标事件对象</title>
+		<style type="text/css" media="screen">
+			body {
+				height: 2000px;
+			}
+		</style>
+	</head>
+	<body>
+		body
+		<script charset="utf-8">
+			document.addEventListener("click", function (e) {
+				// client 返回的是可视区x和y坐标
+				console.log(e.clientX);
+				console.log(e.clientY);
+				console.log("---------------");
+				// pageX 返回的是文档页面的x和y坐标
+				console.log(e.pageX);
+				console.log(e.pageY);
+				console.log("---------------");
+				// screenX 返回的是电脑屏幕的x和y坐标
+				console.log(e.screenX);
+				console.log(e.screenY);
+			});
+		</script>
+	</body>
+</html>

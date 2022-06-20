@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>6. 常用鼠标事件</title>
+	</head>
+	<body>
+		<script charset="utf-8">
+			// contextmenu 禁用右键菜单
+			document.addEventListener("contextmenu", function (e) {
+				e.preventDefault();
+			});
+			// selectstart  禁止选中文字
+			document.addEventListener("selectstart", function (e) {
+				e.preventDefau();
+			});
+		</script>
+	</body>
+</html>

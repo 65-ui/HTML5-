@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>4. 排他思想</title>
+		<script src="../js/jquery.min.js"></script>
+	</head>
+	<body>
+		<button>按钮</button>
+		<button>按钮</button>
+		<button>按钮</button>
+		<button>按钮</button>
+		<button>按钮</button>
+		<script charset="utf-8">
+			$(function () {
+				$("button").click(function () {
+					$(this).css("background", "pink");
+					$(this).siblings("button").css("background", "");
+				});
+			});
+		</script>
+	</body>
+</html>

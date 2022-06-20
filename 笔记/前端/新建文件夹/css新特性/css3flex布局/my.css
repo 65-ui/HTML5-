@@ -1,0 +1,20 @@
+html {
+  background-color: red;
+}
+html div {
+  background: red;
+}
+html div::after {
+  content: "";
+}
+.header {
+  background-color: pink;
+}
+.header div {
+  color: pink;
+}
+
+img {
+  width: .8933rem;
+  height: 2.4rem;
+}

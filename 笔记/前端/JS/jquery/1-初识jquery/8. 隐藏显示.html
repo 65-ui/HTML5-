@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>8. 隐藏显示</title>
+		<script src="../js/jquery.min.js"></script>
+		<style type="text/css" media="screen">
+			div {
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+			}
+		</style>
+		<script charset="utf-8">
+			$(function () {
+				$("button")
+					.eq(0)
+					.click(function () {
+						$("div").show(1000, function () {
+							// alert(12);
+						});
+					});
+				$("button")
+					.eq(1)
+					.click(function () {
+						$("div").hide(1000, function () {
+							// alert(12);
+						});
+						$("button")
+							.eq(2)
+							.click(function () {
+								$("div").toggle(1000);
+							});
+					});
+			});
+		</script>
+	</head>
+	<body>
+		<button>显示</button>
+		<button>隐藏</button>
+		<button>切换</button>
+		<div></div>
+	</body>
+</html>

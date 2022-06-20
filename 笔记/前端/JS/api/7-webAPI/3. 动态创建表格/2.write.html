@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>2.write</title>
+	</head>
+	<body>
+		<button>按钮</button>
+		<p>a</p>
+		<script>
+			window.onload = function () {
+				document.write("<div>123</div>");
+			};
+			var arr = [];
+			for (var i = 0; i <= 100; i++) {
+				arr.push("<a href='a'>aa</a>");
+			}
+			document.body.innerHTML = arr.join();
+		</script>
+	</body>
+</html>

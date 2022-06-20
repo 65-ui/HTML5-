@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 16px;
+        }
+
+        h4 {
+            font-size: 16px;
+        }
+
+        .son {
+            position: absolute;
+            left: 50%;
+            margin-right: -200px;
+            top: 50%;
+            margin-top: -50px;
+            width: 20px;
+            height: 20px;
+            background-color: skyblue;
+        }
+
+        .two {
+            position: absolute;
+            background-color: deeppink;
+        }
+
+        input,
+        textarea {
+            outline: none;
+        }
+
+        textarea {
+            resize: none;
+        }
+       .three {
+           width: 200px;
+           height: 200px;
+           border: 1px solid deepskyblue;
+       }
+        img {
+            width: 50%;
+            height: 100%;
+            vertical-align: middle;
+        }
+        .sansui {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            /* 1.强制换行 变成第一行 */
+            white-space: nowrap;
+            /* 2.隐藏文字*/
+            overflow: hidden;
+            /* 3.改成省略号 */
+            text-overflow: ellipsis ;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="son"></div>
+    <div class="two">三岁 三岁</div>
+    <div style="cursor: not-allowed;"></div>
+
+    <h4>三岁公司</h4>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+
+    <input type="text">
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+<div class="three">
+    <img src="1.jpg" alt=""> 三岁公司
+    </div>
+    <br>
+
+
+    <div class="sansui">三岁公司三岁公司三岁公司</div>
+</body>
+
+</html>

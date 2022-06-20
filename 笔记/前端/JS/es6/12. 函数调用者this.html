@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>12. 函数调用者this</title>
+	</head>
+	<body>
+		body
+		<script charset="utf-8">
+			// 1. 普通函数调用
+			function fn() {
+				// this指向window
+				console.log(11 + this);
+			}
+			window.fu();
+			// 2. 对象方法
+			var o = {
+				sayHi: function () {
+					// this 指向对象 o
+					console.log(11 + this);
+				},
+			};
+			o.sayHi();
+			// 3. 构造函数 this指向ldh
+			function Stra() {}
+			// 原型对象this 也是指向ldh
+			Stra.prototype.sing = function () {};
+			var ldh = new Stra();
+			// 4. 绑定事件对象
+			var btn = document.querySelector("button");
+			btn.addEventListener("click", function () {
+				// this 指向的是函数调用者 btn 这个按钮函数
+				console.log(11 + this);
+			});
+			// 5. 定时器函数
+			window.setInterval(function () {
+				// this 指向window
+				console.log(33 + this);
+			}, 1000);
+			// 6. 立即执行函数
+			(function () {
+				// this 指向的是window
+				console.log(11 + this);
+			})();
+		</script>
+	</body>
+</html>

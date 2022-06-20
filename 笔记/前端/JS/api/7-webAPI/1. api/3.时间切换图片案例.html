@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			img {
+				width: 100px;
+			}
+		</style>
+		<title>Document</title>
+	</head>
+	<body>
+		<img src="img/z.gif" alt="" />
+		<p>早上好</p>
+		<script>
+			var img = document.querySelector("img");
+			var p = document.querySelector("p");
+			var date = new Date();
+			var h = date.getHours();
+			if (h < 12) {
+				img.src = "img/z.gif";
+				p.innerHTML = "早上好";
+			} else if (h < 18) {
+				img.src = "img/x.gif";
+				p.innerHTML = "下午好";
+			} else {
+				img.src = "img/w.gif";
+				p.innerHTML = "晚上好";
+			}
+		</script>
+	</body>
+</html>

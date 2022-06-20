@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>14. 严格模式</title>
+	</head>
+	<body>
+		<!-- 为整个(script标签)开启严格模式 -->
+		<script charset="utf-8">
+			"use strict";
+		</script>
+		<script charset="utf-8">
+			(function () {
+				"use strict";
+			})();
+		</script>
+		<!-- 为某个函数开启严格模式 -->
+		<script charset="utf-8">
+			function fn() {
+				"use strict";
+			}
+			function fun() {}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Index</title>
+	</head>
+	<body>
+		<div></div>
+		<script charset="utf-8">
+			console.log(location.search);
+			var parmas = location.search.substr(1);
+			console.log(parmas);
+			var arr = parmas.split("=");
+			console.log(arr);
+			var div = document.querySelector("div");
+			div.innerHTML = arr[1] + "欢迎你";
+		</script>
+	</body>
+</html>

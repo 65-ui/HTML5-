@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>touch 事件</title>
+		<style type="text/css" media="screen">
+			div {
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<script charset="utf-8">
+			var div = document.querySelector("div");
+			div.addEventListener("touchstart", function (e) {
+				// console.log(11);
+				console.log(e);
+			});
+			div.addEventListener("touchmove", function () {
+				// console.log(33);
+			});
+			div.addEventListener("touchend", function () {
+				// console.log(44);
+			});
+		</script>
+	</body>
+</html>

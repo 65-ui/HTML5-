@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="time">2019</div>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+		<ul id="nav">
+			<li>#^_^#1</li>
+			<li>#^_^#2</li>
+			<li>#^_^#3</li>
+			<li>#^_^#4</li>
+			<li>#^_^#5</li>
+		</ul>
+		<script>
+			var time = document.getElementById("time");
+			console.dir(time);
+			var lis = document.getElementsByTagName("li");
+			for (var i = 0; i < lis.length; i++) {
+				console.log(lis[i]);
+			}
+			var nav = document.getElementById("nav");
+			var navlis = nav.getElementsByTagName("li");
+			var navs = document.querySelector("#nav");
+			var navliss = document.querySelectorAll("li");
+			document.body;
+			document.documentElement;
+		</script>
+	</body>
+</html>

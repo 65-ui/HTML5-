@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>6. 链式编程</title>
+		<script src="../js/jquery.min.js"></script>
+		<style type="text/css" media="screen">
+			div {
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+				transition: all 0.5s;
+			}
+			.current {
+				background-color: yellowgreen;
+				transform: rotate(360deg);
+			}
+		</style>
+	</head>
+	<body>
+		<button>快速</button>
+		<button>快速</button>
+		<button>快速</button>
+		<button>快速</button>
+		<button>快速</button>
+		<button>快速</button>
+		<div></div>
+		<script charset="utf-8">
+			$(function () {
+				$("button").click(function () {
+					$(this)
+						.css({
+							color: "red",
+							// NOTE: 必须使用驼峰命名法
+							backgroundColor: "pink",
+						})
+						.siblings()
+						.css("color", "");
+				});
+				// $("div").click(function () {
+				// 	$(this).addClass("current");
+				// });
+				$("div").click(function () {
+					$(this).toggleClass("current");
+				});
+			});
+		</script>
+	</body>
+</html>

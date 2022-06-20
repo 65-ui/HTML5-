@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- 表单域 -->
+		<form action="demo.pip" method="post" name="name1">
+			<!-- lobel 必须for=id -->
+			<!-- text  -->
+			<label for="text">姓名:</label>
+			<input type="text" name="username" value="请输入姓名" maxlength="6" id="text" /><br />
+			<!-- 密码框  -->
+
+			<label for="password">密码: </label>
+
+			<input type="password" name="password" id="password" /><br />
+			<!-- 单选按钮框 -->
+			<!-- 单选按钮必须起一个相同的名称name="" -->
+			性别:
+			<label for="nan">男♂️</label>
+			<input type="radio" name="sex" value="男♂️" checked="checked" id="nan" />
+			<label for="nv">女♀️</label>
+			<input type="radio" name="sex" value="女♀️" id="nv" /><br />
+			<!-- 复选框 -->
+			爱好:
+
+			<label for="打豆豆">打豆豆</label>
+			<input type="checkbox" name="hobby" value="打豆豆" id="打豆豆" />
+			<label for="睡觉">睡觉</label>
+			<input type="checkbox" name="hobby" value="睡觉" id="睡觉" />
+			<label for="吃饭">吃饭</label>
+			<input type="checkbox" name="hobby" value="吃饭" checked="checked" id="吃饭" /><br />
+			<input type="file" name="文件" /><br />
+
+			<input type="submit" value="免费注册" />
+			<input type="reset" value="重新设置" />
+			<input type="button" value="获取短信验证码" />
+		</form>
+		<form>
+			籍贯:
+			<select name="" id="">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3" selected>3</option>
+			</select>
+		</form>
+		<form action="" method="get" accept-charset="utf-8">
+			今日反馈:<textarea name="sansui" rows="8" cols="40">sansui</textarea>
+		</form>
+	</body>
+</html>

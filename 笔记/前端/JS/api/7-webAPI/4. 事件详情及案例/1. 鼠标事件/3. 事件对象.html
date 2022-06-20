@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>3. 事件对象</title>
+	</head>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+		}
+	</style>
+	<body>
+		<div></div>
+	</body>
+	<script>
+		var div = document.querySelector("div");
+		// div.onclick = function (event) {
+		// 	console.log(event);
+		// };
+		div.addEventListener("click", function (e) {
+			// 兼容性处理方法
+			e = e || window.event;
+			console.log(e);
+		});
+	</script>
+</html>

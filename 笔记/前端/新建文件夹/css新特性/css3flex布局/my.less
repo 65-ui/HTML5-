@@ -1,0 +1,17 @@
+@color: red;
+
+html {
+	background-color: @color;
+	div {
+		background: @color;
+		&::after{
+			content: ""; 
+		}
+	}
+}
+.header{
+	background-color: pink;
+	div {
+		color: pink;
+	}
+}

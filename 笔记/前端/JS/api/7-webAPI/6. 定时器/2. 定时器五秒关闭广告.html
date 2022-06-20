@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>2. 定时器五秒关闭广告</title>
+	</head>
+	<body>
+		<img src="img/ad.jpg" alt="" />
+		<button>按钮</button>
+		<script charset="utf-8">
+			var img = document.querySelector("img");
+			var btn = document.querySelector("button");
+			var time = setTimeout(function () {
+				img.style.display = "none";
+			}, 5000);
+			btn.addEventListener("click", function () {
+				clearTimeout(time);
+			});
+			setInterval();
+		</script>
+	</body>
+</html>
