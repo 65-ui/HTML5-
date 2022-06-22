@@ -4,3 +4,8 @@ body {
 	padding: 0;
 	background-color: deeppink;
 }
+button {
+	width: 200px;
+	height: 300px;
+	border: 1px solid red;
+}
